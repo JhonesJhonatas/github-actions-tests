@@ -12,6 +12,7 @@ function App() {
       <span>Teting Deploy</span>
       <span>Teting Deploy 2</span>
       <span>Teting Deploy 3</span>
+      <span>Teting Deploy 4</span>
     </div>
   )
 }
