@@ -7,8 +7,8 @@ export const CountBox: React.FC = () => {
 
   return (
     <div className={style['flex-box']}>
-      <span>{count}</span>
       <button onClick={() => setCount(oldState => oldState + 1)}>AddCount</button>
+      <span>{count}</span>
     </div>
   )
 }
