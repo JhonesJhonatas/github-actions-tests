@@ -3,7 +3,7 @@ import { CountBox } from './components/CountBox'
 import { FormToSum } from './components/FormToSum'
 
 function App() {
-
+  console.log('tem que sumir')
 
   return (
     <div>
@@ -13,6 +13,7 @@ function App() {
       <span>Teting Deploy 2</span>
       <span>Teting Deploy 3</span>
       <span>Teting Deploy 4</span>
+      <span>Teting Deploy 5</span>
     </div>
   )
 }
