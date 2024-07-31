@@ -3,7 +3,6 @@ import { CountBox } from './components/CountBox'
 import { FormToSum } from './components/FormToSum'
 
 function App() {
-  console.log('tem que sumir')
 
   return (
     <div>
