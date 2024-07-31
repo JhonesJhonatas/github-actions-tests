@@ -3,6 +3,10 @@
   align-items: center;
   gap: 1rem;
 
+  padding: 1rem;
+  border: 2px solid gray;
+  border-radius: 8px;
+
   span{
     font-size: 1.5rem;
     font-weight: bold;
