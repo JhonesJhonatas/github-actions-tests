@@ -9,6 +9,7 @@ function App() {
     <div>
       <CountBox />
       <FormToSum />
+      <span>Teting Deploy</span>
     </div>
   )
 }
