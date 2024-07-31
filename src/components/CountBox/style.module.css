@@ -1,0 +1,10 @@
+.flex-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  span{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}

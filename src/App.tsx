@@ -1,5 +1,5 @@
 import './App.css'
-import { CountBox } from './components/count-box'
+import { CountBox } from './components/CountBox'
 
 function App() {
 
