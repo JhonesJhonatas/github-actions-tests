@@ -3,6 +3,9 @@ name: Manual Merge Development to Main
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   merge:
     runs-on: ubuntu-latest
