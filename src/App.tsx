@@ -11,6 +11,7 @@ function App() {
       <FormToSum />
       <span>Teting Deploy</span>
       <span>Teting Deploy 2</span>
+      <span>Teting Deploy 3</span>
     </div>
   )
 }
