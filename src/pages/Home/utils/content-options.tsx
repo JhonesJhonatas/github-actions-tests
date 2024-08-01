@@ -12,7 +12,6 @@ interface ContentProps {
 
 export const Content: React.FC<ContentProps> = ({fileName}) => {
   const [data, setData] = useState(null);
-  const [error, setError] = useState<any>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,16 +19,13 @@ export const Content: React.FC<ContentProps> = ({fileName}) => {
         const result = await fetchYml(`/.github/workflows/${fileName}.yml`);
         setData(result);
       } catch (error) {
-        setError(error);
+        console.log(error)
       }
     };
 
     fetchData();
   }, [fileName]);
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
 
   if (!data) {
     return <div>Loading...</div>;
