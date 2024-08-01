@@ -1,0 +1,46 @@
+name: Merge Dev to Main
+
+on:
+  workflow_dispatch:
+    inputs:
+      source-branch:
+        description: 'Select the source branch to merge'
+        required: true
+        default: 'development'
+        type: choice
+        options:
+          - main
+          - development
+      destination-branch:
+        description: 'Select the destination branch'
+        required: true
+        default: 'main'
+        type: choice
+        options:
+          - main
+          - development
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Git
+      run: |
+        git config --global user.name 'Jhones Jhonatas'
+        git config --global user.email 'jhones.jhonatas@outlook.com.br'
+
+    - name: Merge selected branch to destination branch
+      run: |
+        git fetch origin
+        git checkout ${{ github.event.inputs.destination-branch }}
+        git merge origin/${{ github.event.inputs.source-branch }}
+        git push origin ${{ github.event.inputs.destination-branch }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
