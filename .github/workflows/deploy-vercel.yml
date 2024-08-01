@@ -1,4 +1,4 @@
-name: deploy-on-vercel-production
+name: deploy-on-vercel
 
 env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
