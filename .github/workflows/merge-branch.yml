@@ -7,18 +7,12 @@ on:
         description: 'Select the source branch to merge'
         required: true
         default: 'development'
-        type: choice
-        options:
-          - main
-          - development
+        type: string
       destination-branch:
         description: 'Select the destination branch'
         required: true
         default: 'main'
-        type: choice
-        options:
-          - main
-          - development
+        type: string
 
 permissions:
   contents: write
