@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { tv } from "tailwind-variants";
-import { contentOptions } from "./utils/content-options";
+import { Content } from "./utils/content-options";
 
 const navItems = tv({
   base: "p-2 rounded cursor-pointer transition-all",
@@ -12,11 +12,11 @@ const navItems = tv({
   },
 });
 
-type NavItems = "deploy-on-vercel" | "merge-branch" | "rollback";
+type NavItems = "deploy-vercel" | "merge-branch" | "rollback";
 
 export const Home: React.FC = () => {
   const [selectedItem, setSelectedItem] =
-    useState<NavItems>("deploy-on-vercel");
+    useState<NavItems>("deploy-vercel");
 
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-center">
@@ -24,9 +24,9 @@ export const Home: React.FC = () => {
         <div className="flex flex-col gap-1 bg-slate-700 p-2 bg-opacity-50 rounded">
           <span
             className={navItems({
-              selected: selectedItem === "deploy-on-vercel",
+              selected: selectedItem === "deploy-vercel",
             })}
-            onClick={() => setSelectedItem("deploy-on-vercel")}
+            onClick={() => setSelectedItem("deploy-vercel")}
           >
             Deploy on Vercel
           </span>
@@ -43,8 +43,8 @@ export const Home: React.FC = () => {
             Rollback
           </span>
         </div>
-        <div className="p-2 rounded">
-          <span>{contentOptions[selectedItem]}</span>
+        <div className="p-2 rounded overflow-auto">
+          <Content fileName={selectedItem} />
         </div>
       </div>
     </div>
